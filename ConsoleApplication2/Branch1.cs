@@ -14,6 +14,8 @@ namespace ConsoleApplication2
 
         public static void Bras(string Input)
         {
+            
+           
             if (Input == "1")
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -39,10 +41,16 @@ namespace ConsoleApplication2
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.ReadLine();
             }
+            else
+            {
+                Console.Write("Please select a valid option");
+                Thread.Sleep(1000);
+                AI.initFunc();
+            }
         }
         public static void TypeWritter(string MyTxt)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"F:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
             for (int i = 0; i < MyTxt.Length; i++)
             {
                 Console.Write(MyTxt[i]);

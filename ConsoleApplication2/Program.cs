@@ -10,10 +10,63 @@ namespace ConsoleApplication2
 {
     class Program
     {
+        private static void ExampleCommand(string[] Args)
+        {
+            AIConsole.WriteLine("Hello World!");
+        }
+
+        private static void ExampleCommandArgs(string[] Args)
+        {
+            if (Args != null)
+            {
+                AIConsole.WriteLine("Args: ");
+                foreach (string Arg in Args)
+                {
+                    AIConsole.WriteLine(Arg);
+                }
+            }
+            else
+            {
+                /*No Args Entered*/
+            }
+        }
+
+        public static void Help(string[] Args)
+        {
+            foreach(var Command in CommandProcessor.Commands)
+            {
+                AIConsole.WriteLine(Command.Name + " - " + Command.Description);
+            }
+        }
+
         static void Main(string[] args)
         {
-            
-            int Usercontrol = 1;
+            /*Add Commands*/
+            CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.DEFAULT);
+
+            AIConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, new Random().Next(500, 1000));
+            AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
+            AIConsole.Write(" [Loading core operating functions]...\n\n", new Random().Next(500, 1000));
+            AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
+            AIConsole.Write(" [Loading User space]...\n\n", new Random().Next(3000, 5000));
+            AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, new Random().Next(600, 1000));
+            AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+            AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+            Console.Clear();
+            AIConsole.Write(" Welcome to ");
+            AIConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan,new Random().Next(300,500));
+            AIConsole.Write(" Welcome ");
+            AIConsole.Write("<unkown>\n\n",ConsoleColor.Red, new Random().Next(300,500));
+            AIConsole.Write(" Type help on the next line to see a list of commands:\n\n", new Random().Next(300, 500));
+
+            while (true)
+            {
+                CommandProcessor.ProcessCommand(Console.ReadLine());
+            }
+
+            /*int Usercontrol = 1;
             Thread.Sleep(1000);
             Console.Write(" [Initiating first boot procedure]...\n\n");
             Thread.Sleep(500);
@@ -149,10 +202,7 @@ namespace ConsoleApplication2
                     Command = "";
                     Command = Console.ReadLine();
                 }
-
-            }
-            
-            
+            }                */
         }
     }
 }

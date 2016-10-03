@@ -11,6 +11,8 @@ namespace ConsoleApplication2
 {
     class AI
     {
+        private static SoundPlayer ConsoleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
+
         public static void initFunc()
         {
             Console.Clear();
@@ -61,7 +63,7 @@ namespace ConsoleApplication2
             Thread.Sleep(2000);
             Console.ForegroundColor = ConsoleColor.Red;
             TypeWritter("STUPID ");
-            Thread.Sleep(000);
+            Thread.Sleep(2000);
             Console.ForegroundColor = ConsoleColor.Yellow;
             TypeWritter("name :D\n\n");
             Thread.Sleep(2000);
@@ -78,11 +80,10 @@ namespace ConsoleApplication2
         }
         public static void TypeWritter(string MyTxt)
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"F:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
             for (int i = 0; i < MyTxt.Length; i++)
             {
                 Console.Write(MyTxt[i]);
-                simpleSound.Play();
+                ConsoleSound.Play();
                 Thread.Sleep(50);
             }
         }
