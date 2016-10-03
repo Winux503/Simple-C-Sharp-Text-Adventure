@@ -14,6 +14,21 @@ namespace ConsoleApplication2
         {
             AIConsole.WriteLine("Hello World!");
         }
+        private static void listdir(string[] Args)
+        {
+            AIConsole.Write("\n Listing Current Working Directory...\n", ConsoleColor.White, new Random().Next(500, 1000));
+            AIConsole.Write(" COS/base/users/UNKNOWN/home", ConsoleColor.Blue, new Random().Next(500, 1000));
+            AIConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
+        }
+
+        private static void list(string[] Args)
+        {
+            AIConsole.Write(" Listing contents of: ", ConsoleColor.White, new Random().Next(500, 1000));
+            AIConsole.Write("COS/base/users/UNKNOWN/home\n", ConsoleColor.Blue, new Random().Next(500, 1000));
+            AIConsole.Write("     config.txt           Documents            TotallyNotAMeme.PNG     \n     RUN_INIT.txt    ", ConsoleColor.White, new Random().Next(500, 1000));
+            AIConsole.Write("\n Existing to prompt...\n\n ",ConsoleColor.White,new Random().Next(500,1000));
+            
+        }
 
         private static void ExampleCommandArgs(string[] Args)
         {
@@ -43,8 +58,10 @@ namespace ConsoleApplication2
         {
             /*Add Commands*/
             CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("ListDir", "List the current working directory", listdir, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("List", "Lists the contents of the current directory", list, CommandFlags.DEFAULT);
 
             AIConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, new Random().Next(500, 1000));
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
