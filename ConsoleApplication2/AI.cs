@@ -11,11 +11,27 @@ namespace ConsoleApplication2
 {
     class AI
     {
-        private static SoundPlayer ConsoleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
+        private static SoundPlayer ConsoleSound = new SoundPlayer(@"F:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
 
         public static void initFunc()
         {
             Console.Clear();
+            AIConsole.WriteLine("\n Initialising Artificial Inteligence Constructs\n\n", new Random().Next(2500,5000));
+            AIConsole.WriteLine(" 0%>==========================================================>100%", new Random().Next(500, 1000));
+            AIConsole.WriteLine("\n\n WARNING AI IS UNSTABLE\n\n", new Random().Next(500, 1000));
+            AIConsole.WriteLine(" DO ", new Random().Next(500, 1000));
+            AIConsole.WriteLine("NOT ", new Random().Next(500, 1000));
+            AIConsole.WriteLine("PROVOKE ", new Random().Next(500, 1000));
+            AIConsole.WriteLine("IT!\n", new Random().Next(500, 1000));
+            AIConsole.WriteLine("\n Running Final Initialisation Script", new Random().Next(500, 1000));
+            AIConsole.WriteLine("\n\n 0%>==========================================================>100%\n\n", new Random().Next(500, 1000));
+            Console.Clear();
+            AIConsole.WriteLine("", new Random().Next(500, 1000));
+            AIConsole.WriteLine("", new Random().Next(500, 1000));
+            AIConsole.WriteLine("", new Random().Next(500, 1000));
+
+
+            /* Console.Clear();
             Thread.Sleep(5000);
             TypeWritter("\n Initialising Artificial Inteligence Constructs\n\n");
             Thread.Sleep(1000);
@@ -85,7 +101,8 @@ namespace ConsoleApplication2
                 Console.Write(MyTxt[i]);
                 ConsoleSound.Play();
                 Thread.Sleep(50);
-            }
+            }*/
         }
+        
     }
 }
