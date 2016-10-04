@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.IO;
+using System.Media;
 
 namespace ConsoleApplication2
 {
@@ -70,6 +72,7 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, new Random().Next(500, 1000));
             AIConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, new Random().Next(500, 1000));
             AIConsole.WriteLine(" ----------------------------Credits----------------------------\n\n", ConsoleColor.White, new Random().Next(500, 1000));
+            
         }
     }
 }

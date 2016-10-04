@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
+using System.Media;
 
 namespace ConsoleApplication2
 {
@@ -17,7 +18,7 @@ namespace ConsoleApplication2
             //AIConsole is a separate function that combines Console.Write, ConsoleColor and Thread.Sleep.
             AIConsole.WriteLine("Hello World!");
         }
-        private static void Graphics(string[] Args)
+        private static void Credits(string[] Args)
         {
             //AIConsole is a separate function that combines Console.Write, ConsoleColor and Thread.Sleep.
             GraphicsCon.GMain();
@@ -98,7 +99,7 @@ namespace ConsoleApplication2
         {
             foreach(var Command in CommandProcessor.Commands)
             {
-                AIConsole.WriteLine(Command.Name + " - " + Command.Description);
+                AIConsole.Write(" " + Command.Name + " - " + Command.Description + "\n");
             }
         }
 
@@ -108,7 +109,7 @@ namespace ConsoleApplication2
             //this section is where the commands are added.
             //they all have a description, a name and some flags
             CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Graph", "Displays some graphics on the screen", Graphics, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Credits", "Shows the people who made this", Credits, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("init", "<command description not found>", init, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Read", "Prints the contents of a text file to the screen", Read, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("ListDir", "List the current working directory", listdir, CommandFlags.DEFAULT);

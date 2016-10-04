@@ -26,9 +26,19 @@ namespace ConsoleApplication2
             AIConsole.WriteLine("\n Running Final Initialisation Script", new Random().Next(500, 1000));
             AIConsole.WriteLine("\n\n 0%>==========================================================>100%\n\n", new Random().Next(500, 1000));
             Console.Clear();
-            AIConsole.WriteLine("", new Random().Next(500, 1000));
-            AIConsole.WriteLine("", new Random().Next(500, 1000));
-            AIConsole.WriteLine("", new Random().Next(500, 1000));
+            AIConsole.WriteLine(" Hello there, I am the ChaOS AI Program\n\n", ConsoleColor.Cyan ,new Random().Next(500, 1000));
+            AIConsole.WriteLine(" My name is sys-fs\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AIConsole.WriteLine(" Hmm... it would apear that this user acount is errored, lets fix that.", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AIConsole.WriteLine(" Together..\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AIConsole.WriteLine(" Please...\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AIConsole.WriteLine(" Tell me your name...\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            string Name = "";
+            Name = Console.ReadLine();
+            AIConsole.WriteLine(Name, ConsoleColor.Magenta, new Random().Next(500, 1000));
+            AIConsole.WriteLine(", Huh, that is a ", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AIConsole.WriteLine("STUPID ", ConsoleColor.Red, new Random().Next(500, 1000));
+            AIConsole.WriteLine("name :D\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AIConsole.WriteLine(" So what brings you here?\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
 
 
             /* Console.Clear();
@@ -56,7 +66,7 @@ namespace ConsoleApplication2
             Thread.Sleep(1000);
             TypeWritter(".\n\n");
             Thread.Sleep(1000);
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             TypeWritter(" Hello there, I am the ChaOS AI Program\n\n");
             Thread.Sleep(2000);
             TypeWritter(" My name is sys-fs\n\n");
@@ -74,13 +84,13 @@ namespace ConsoleApplication2
             Name =  Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.Cyan;
             TypeWritter("\n " + Name + "");
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             TypeWritter(", Huh, that is a ");
             Thread.Sleep(2000);
             Console.ForegroundColor = ConsoleColor.Red;
             TypeWritter("STUPID ");
             Thread.Sleep(2000);
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             TypeWritter("name :D\n\n");
             Thread.Sleep(2000);
             TypeWritter(" So what brings you here?\n\n");

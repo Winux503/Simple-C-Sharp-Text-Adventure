@@ -19,7 +19,7 @@ namespace ConsoleApplication2
             //add typewriter func here
             Console.ForegroundColor = Colour;
             //Console.WriteLine(Text);
-            Console.ForegroundColor = ConsoleColor.White;
+            //Console.ForegroundColor = ConsoleColor.White;
             Thread.Sleep(Delay);
             SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
             for (int i = 0; i < Text.Length; i++)
@@ -34,7 +34,7 @@ namespace ConsoleApplication2
         {
             Console.ForegroundColor = Colour;
             //Console.WriteLine(Text);
-            Console.ForegroundColor = ConsoleColor.White;
+            //Console.ForegroundColor = ConsoleColor.White;
             SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
             for (int i = 0; i < Text.Length; i++)
             {
