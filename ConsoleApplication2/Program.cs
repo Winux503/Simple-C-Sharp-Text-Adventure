@@ -2,135 +2,146 @@
 
 namespace ConsoleApplication2
 {
-    class Program
+    internal static class Program
     {
         // This is an example command.
         // All commans are stored in a separate function
-        private static void ExampleCommand(string[] Args)
+        private static void ExampleCommand(string[] args)
         {
             //AIConsole is a separate function that combines Console.Write, ConsoleColor and Thread.Sleep.
-            AIConsole.WriteLine("Hello World!");
+            AiConsole.WriteLine("Hello World!");
         }
-        private static void Credits(string[] Args)
+
+        private static void Credits(string[] args)
         {
             //AIConsole is a separate function that combines Console.Write, ConsoleColor and Thread.Sleep.
             GraphicsCon.GMain();
         }
 
-
-        private static void user(string[] Args)
+        private static void User(string[] args)
         {
-            AIConsole.Write("\n NO USER ACOUNT FOUND EXITING!\n\n",ConsoleColor.Red,new Random().Next(500,100));
+            AiConsole.Write("\n NO USER ACOUNT FOUND EXITING!\n\n",ConsoleColor.Red,new Random().Next(500,100));
         }
 
-        private static void init(string[] Args)
+        private static void Init(string[] args)
         {
-            AI.initFunc();
-        }
-        private static void listdir(string[] Args)
-        {
-            AIConsole.Write("\n Listing Current Working Directory...\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AIConsole.Write(" COS/base/users/UNKNOWN/home", ConsoleColor.Blue, new Random().Next(500, 1000));
-            AIConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
+            Ai.InitFunc();
         }
 
-        private static void list(string[] Args)
+        private static void ListDir(string[] args)
         {
-            AIConsole.Write(" Listing contents of: ", ConsoleColor.White, new Random().Next(500, 1000));
-            AIConsole.Write("COS/base/users/UNKNOWN/home\n", ConsoleColor.Blue, new Random().Next(500, 1000));
-            AIConsole.Write("     config.txt           Documents            TotallyNotAMeme.PNG     \n     RUN_INIT.txt    ", ConsoleColor.White, new Random().Next(500, 1000));
-            AIConsole.Write("\n Existing to prompt...\n\n ",ConsoleColor.White,new Random().Next(500,1000));
+            AiConsole.Write("\n Listing Current Working Directory...\n", ConsoleColor.White, new Random().Next(500, 1000));
+            AiConsole.Write(" COS/base/users/UNKNOWN/home", ConsoleColor.Blue, new Random().Next(500, 1000));
+            AiConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
+        }
+
+        private static void List(string[] args)
+        {
+            AiConsole.Write(" Listing contents of: ", ConsoleColor.White, new Random().Next(500, 1000));
+            AiConsole.Write("COS/base/users/UNKNOWN/home\n", ConsoleColor.Blue, new Random().Next(500, 1000));
+            AiConsole.Write("     config.txt           Documents            TotallyNotAMeme.PNG     \n     RUN_INIT.txt    ", ConsoleColor.White, new Random().Next(500, 1000));
+            AiConsole.Write("\n Existing to prompt...\n\n ",ConsoleColor.White,new Random().Next(500,1000));
             
         }
 
         //commands can accept arguments for extendended functionality. 
-        private static void ExampleCommandArgs(string[] Args)
+        private static void ExampleCommandArgs(string[] args)
         {
-            if (Args != null)
+            if (args != null)
             {
-                AIConsole.Write("Args: ");
-                foreach (string Arg in Args)
+                AiConsole.Write("Args: ");
+                foreach (var arg in args)
                 {
-                    AIConsole.Write(Arg);
+                    AiConsole.Write(arg);
                 }
             }
+
             else
             {
                 /*No Args Entered*/
             }
         }
-        private static void Read(string[] Args)
+
+        private static void Read(string[] args)
         {
-            if (Args != null)
+            if (args != null)
             {
-                if(Args[0] == "config.txt")
+                if (args[0] == "config.txt")
                 {
-                    AIConsole.Write("  Users: ERROR 451\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AIConsole.Write("  Permissions: NONE\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AIConsole.Write("  AI_status: OFFLINE\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AIConsole.Write("  Error_logging: False\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AIConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
-                }else if(Args[0] == "RUN_INIT.txt")
-                {
-                    AIConsole.Write("  Run the init command.....\n Please\n I beg you\n\n", ConsoleColor.White, new Random().Next(500, 1000));
+                    AiConsole.Write("  Users: ERROR 451\n", ConsoleColor.White, new Random().Next(500, 1000));
+                    AiConsole.Write("  Permissions: NONE\n", ConsoleColor.White, new Random().Next(500, 1000));
+                    AiConsole.Write("  AI_status: OFFLINE\n", ConsoleColor.White, new Random().Next(500, 1000));
+                    AiConsole.Write("  Error_logging: False\n\n", ConsoleColor.White, new Random().Next(500, 1000));
+                    AiConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
                 }
+
+                else if (args[0] == "RUN_INIT.txt")
+                {
+                    AiConsole.Write("  Run the init command.....\n Please\n I beg you\n\n", ConsoleColor.White,
+                        new Random().Next(500, 1000));
+                }
+
                 else
                 {
-                    AIConsole.Write(" Please enter a valid argument");
+                    AiConsole.Write(" Please enter a valid argument");
                 }
             }
+
             else
             {
-                AIConsole.Write(" Please enter a valid argument");
+                AiConsole.Write(" Please enter a valid argument");
                 /*No Args Entered*/
             }
         }
 
         //this help application reads all current comands and displays its name and desccription.
         //this function extends itslef depending on the amount of commands.
-        public static void Help(string[] Args)
+        private static void Help(string[] args)
         {
-            foreach(var Command in CommandProcessor.Commands)
+            foreach(var command in CommandProcessor.Commands)
             {
-                AIConsole.Write(" " + Command.Name + " - " + Command.Description + "\n");
+                AiConsole.Write(" " + command.Name + " - " + command.Description + "\n");
             }
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             /*Add Commands*/
             //this section is where the commands are added.
             //they all have a description, a name and some flags
-            CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Credits", "Shows the people who made this", Credits, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("init", "<command description not found>", init, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Read", "Prints the contents of a text file to the screen", Read, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("ListDir", "List the current working directory", listdir, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("List", "Lists the contents of the current directory", list, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.Default);
+            CommandProcessor.AddCommand("Credits", "Shows the people who made this", Credits, CommandFlags.Default);
+            CommandProcessor.AddCommand("init", "<command description not found>", Init, CommandFlags.Default);
+            CommandProcessor.AddCommand("Read", "Prints the contents of a text file to the screen", Read, CommandFlags.Default);
+            CommandProcessor.AddCommand("ListDir", "List the current working directory", ListDir, CommandFlags.Default);
+            CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.Default);
+            CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.Default);
+            CommandProcessor.AddCommand("List", "Lists the contents of the current directory", List, CommandFlags.Default);
 
             //this is the beginning of the program itself.
-            AIConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, new Random().Next(500, 1000));
-            AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
-            AIConsole.Write(" [Loading core operating functions]...\n\n", new Random().Next(500, 1000));
-            AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
-            AIConsole.Write(" [Loading User space]...\n\n", new Random().Next(3000, 5000));
-            AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, new Random().Next(600, 1000));
-            AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
-            AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+            AiConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, new Random().Next(500, 1000));
+            AiConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
+            AiConsole.Write(" [Loading core operating functions]...\n\n", new Random().Next(500, 1000));
+            AiConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
+            AiConsole.Write(" [Loading User space]...\n\n", new Random().Next(3000, 5000));
+            AiConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, new Random().Next(600, 1000));
+            AiConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+            AiConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+
             Console.Clear();
-            AIConsole.Write(" Welcome to ");
-            AIConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan,new Random().Next(300,500));
-            AIConsole.Write(" Welcome ");
-            AIConsole.Write("<unkown>\n\n",ConsoleColor.Red, new Random().Next(300,500));
-            AIConsole.Write(" Type help on the next line to see a list of commands:\n\n", new Random().Next(300, 500));
+
+            AiConsole.Write(" Welcome to ");
+            AiConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan,new Random().Next(300,500));
+            AiConsole.Write(" Welcome ");
+            AiConsole.Write("<unkown>\n\n",ConsoleColor.Red, new Random().Next(300,500));
+            AiConsole.Write(" Type help on the next line to see a list of commands:\n\n", new Random().Next(300, 500));
         
             //this while starts the command processor.
             while (true)
             {
                 CommandProcessor.ProcessCommand(Console.ReadLine());
             }
+
             //this is old code ignore it.
             /*int Usercontrol = 1;
             Thread.Sleep(1000);

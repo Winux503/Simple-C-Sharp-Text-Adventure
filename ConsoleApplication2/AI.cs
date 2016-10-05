@@ -3,37 +3,41 @@ using System.Media;
 
 namespace ConsoleApplication2
 {
-    class AI
+    internal static class Ai
     {
-        private static SoundPlayer ConsoleSound = new SoundPlayer(@"F:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
+        private static SoundPlayer _consoleSound =
+            new SoundPlayer(@"F:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
 
-        public static void initFunc()
+        public static void InitFunc()
         {
             Console.Clear();
-            AIConsole.WriteLine("\n Initialising Artificial Inteligence Constructs\n\n", new Random().Next(2500,5000));
-            AIConsole.WriteLine(" 0%>==========================================================>100%", new Random().Next(500, 1000));
-            AIConsole.WriteLine("\n\n WARNING AI IS UNSTABLE\n\n", new Random().Next(500, 1000));
-            AIConsole.WriteLine(" DO ", new Random().Next(500, 1000));
-            AIConsole.WriteLine("NOT ", new Random().Next(500, 1000));
-            AIConsole.WriteLine("PROVOKE ", new Random().Next(500, 1000));
-            AIConsole.WriteLine("IT!\n", new Random().Next(500, 1000));
-            AIConsole.WriteLine("\n Running Final Initialisation Script", new Random().Next(500, 1000));
-            AIConsole.WriteLine("\n\n 0%>==========================================================>100%\n\n", new Random().Next(500, 1000));
+            AiConsole.WriteLine("\n Initialising Artificial Inteligence Constructs\n\n", new Random().Next(2500, 5000));
+            AiConsole.WriteLine(" 0%>==========================================================>100%",
+                new Random().Next(500, 1000));
+            AiConsole.WriteLine("\n\n WARNING AI IS UNSTABLE\n\n", new Random().Next(500, 1000));
+            AiConsole.WriteLine(" DO ", new Random().Next(500, 1000));
+            AiConsole.WriteLine("NOT ", new Random().Next(500, 1000));
+            AiConsole.WriteLine("PROVOKE ", new Random().Next(500, 1000));
+            AiConsole.WriteLine("IT!\n", new Random().Next(500, 1000));
+            AiConsole.WriteLine("\n Running Final Initialisation Script", new Random().Next(500, 1000));
+            AiConsole.WriteLine("\n\n 0%>==========================================================>100%\n\n",
+                new Random().Next(500, 1000));
             Console.Clear();
-            AIConsole.WriteLine(" Hello there, I am the ChaOS AI Program\n\n", ConsoleColor.Cyan ,new Random().Next(500, 1000));
-            AIConsole.WriteLine(" My name is sys-fs\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            AIConsole.WriteLine(" Hmm... it would apear that this user acount is errored, lets fix that.", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            AIConsole.WriteLine(" Together..\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            AIConsole.WriteLine(" Please...\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            AIConsole.WriteLine(" Tell me your name...\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            string Name = "";
-            Name = Console.ReadLine();
-            AIConsole.WriteLine(Name, ConsoleColor.Magenta, new Random().Next(500, 1000));
-            AIConsole.WriteLine(", Huh, that is a ", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            AIConsole.WriteLine("STUPID ", ConsoleColor.Red, new Random().Next(500, 1000));
-            AIConsole.WriteLine("name :D\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
-            AIConsole.WriteLine(" So what brings you here?\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
-
+            AiConsole.WriteLine(" Hello there, I am the ChaOS AI Program\n\n", ConsoleColor.Cyan,
+                new Random().Next(500, 1000));
+            AiConsole.WriteLine(" My name is sys-fs\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AiConsole.WriteLine(" Hmm... it would apear that this user acount is errored, lets fix that.",
+                ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AiConsole.WriteLine(" Together..\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AiConsole.WriteLine(" Please...\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AiConsole.WriteLine(" Tell me your name...\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            var name = "";
+            name = Console.ReadLine();
+            AiConsole.WriteLine(name, ConsoleColor.Magenta, new Random().Next(500, 1000));
+            AiConsole.WriteLine(", Huh, that is a ", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AiConsole.WriteLine("STUPID ", ConsoleColor.Red, new Random().Next(500, 1000));
+            AiConsole.WriteLine("name :D\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
+            AiConsole.WriteLine(" So what brings you here?\n\n", ConsoleColor.Cyan, new Random().Next(500, 1000));
 
             /* Console.Clear();
             Thread.Sleep(5000);
@@ -107,6 +111,5 @@ namespace ConsoleApplication2
                 Thread.Sleep(50);
             }*/
         }
-        
     }
 }

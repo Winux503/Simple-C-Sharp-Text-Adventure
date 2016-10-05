@@ -60,6 +60,8 @@
   <ItemGroup>
     <Compile Include="AI.cs" />
     <Compile Include="Branch1.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandFlags.cs" />
     <Compile Include="CommandProcessor.cs" />
     <Compile Include="Console.cs" />
     <Compile Include="Graphics.cs" />
