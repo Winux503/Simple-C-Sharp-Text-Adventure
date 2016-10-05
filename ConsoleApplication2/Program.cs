@@ -133,7 +133,7 @@ namespace ConsoleApplication2
             AiConsole.Write(" Welcome to ");
             AiConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan, RandomNumber.Between(300,500));
             AiConsole.Write(" Welcome ");
-            AiConsole.Write("<unkown>\n\n",ConsoleColor.Red, RandomNumber.Between(300,500));
+            AiConsole.Write("<unknown>\n\n",ConsoleColor.Red, RandomNumber.Between(300,500));
             AiConsole.Write(" Type help on the next line to see a list of commands:\n\n", RandomNumber.Between(300, 500));
         
             //this while starts the command processor.
