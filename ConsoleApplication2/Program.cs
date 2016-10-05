@@ -79,7 +79,7 @@ namespace ConsoleApplication2
                     AIConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
                 }else if(Args[0] == "RUN_INIT.txt")
                 {
-                    AIConsole.Write("  Run the init command.....\n Please\n I beg you\n\n", ConsoleColor.White, new Random().Next(500, 1000));
+                    AIConsole.Write(" Run the init command.....\n Please\n I beg you\n\n", ConsoleColor.White, new Random().Next(500, 1000));
                 }
                 else
                 {
@@ -118,20 +118,20 @@ namespace ConsoleApplication2
             CommandProcessor.AddCommand("List", "Lists the contents of the current directory", list, CommandFlags.DEFAULT);
 
             //this is the beginning of the program itself.
-            AIConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, new Random().Next(500, 1000));
+            AIConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, 1000, 1500);
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
-            AIConsole.Write(" [Loading core operating functions]...\n\n", new Random().Next(500, 1000));
-            AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
-            AIConsole.Write(" [Loading User space]...\n\n", new Random().Next(3000, 5000));
-            AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, new Random().Next(600, 1000));
-            AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
-            AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+            AIConsole.Write(" [Loading core operating functions]...\n\n", ConsoleColor.White, 1000, 1500);
+            AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, 1000, 1500);
+            AIConsole.Write(" [Loading User space]...\n\n", ConsoleColor.White,  3000, 5000);
+            AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, 600, 1000);
+            AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, 600, 1000);
+            AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
             Console.Clear();
             AIConsole.Write(" Welcome to ");
-            AIConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan,new Random().Next(300,500));
+            AIConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan, 300, 500);
             AIConsole.Write(" Welcome ");
-            AIConsole.Write("<unkown>\n\n",ConsoleColor.Red, new Random().Next(300,500));
-            AIConsole.Write(" Type help on the next line to see a list of commands:\n\n", new Random().Next(300, 500));
+            AIConsole.Write("<unkown>\n\n",ConsoleColor.Red, 300, 500);
+            AIConsole.Write(" Type help on the next line to see a list of commands:\n\n", ConsoleColor.White, 300, 500);
         
             //this while starts the command processor.
             while (true)
