@@ -48,7 +48,7 @@ namespace ConsoleApplication2
             for (var i = 0; i < 120; i++)
                 for (var o = 0; o < 60; o++)
                 {
-                    Console.ForegroundColor = colours[new Random().Next(0, 5)];
+                    Console.ForegroundColor = colours[RandomNumber.Between(0, 5)];
                     WriteAt("+", i, o);
                     Console.WriteLine();
                     Thread.Sleep(1);
@@ -57,23 +57,23 @@ namespace ConsoleApplication2
             Console.ResetColor();
             Console.SetCursorPosition(0, 0);
             AiConsole.WriteLine(" \n----------------------------Credits----------------------------\n\n",
-                ConsoleColor.White, new Random().Next(500, 1000));
+                ConsoleColor.White, RandomNumber.BasicTextDelay());
             AiConsole.WriteLine(" iMoD1998 - Cronstuction of the new Console commands and ideas\n\n", ConsoleColor.White,
-                new Random().Next(500, 1000));
+                RandomNumber.BasicTextDelay());
             AiConsole.WriteLine(" tfm - Troubleshooting and testing\n\n", ConsoleColor.White,
-                new Random().Next(500, 1000));
-            AiConsole.WriteLine(" Squad Chat - \"Morale Support\"\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.WriteLine(" MLP - Ideas and assistance\n\n", ConsoleColor.White, new Random().Next(500, 1000));
+                RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" Squad Chat - \"Morale Support\"\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" MLP - Ideas and assistance\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
             AiConsole.WriteLine(" Winux503 - Initial ideas and implementation\n\n", ConsoleColor.White,
-                new Random().Next(500, 1000));
-            AiConsole.WriteLine(" BLB - Being French\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.WriteLine(" BLJ - Existing\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.WriteLine(" Tizzle - Being a G\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.WriteLine(" Jack - Being Scouse\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, new Random().Next(500, 1000));
+                RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" BLB - Being French\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" BLJ - Existing\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" Tizzle - Being a G\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" Jack - Being Scouse\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
             AiConsole.WriteLine(" ----------------------------Credits----------------------------\n\n",
-                ConsoleColor.White, new Random().Next(500, 1000));
+                ConsoleColor.White, RandomNumber.BasicTextDelay());
         }
     }
 }

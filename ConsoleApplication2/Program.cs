@@ -20,7 +20,7 @@ namespace ConsoleApplication2
 
         private static void User(string[] args)
         {
-            AiConsole.Write("\n NO USER ACOUNT FOUND EXITING!\n\n",ConsoleColor.Red,new Random().Next(500,100));
+            AiConsole.Write("\n NO USER ACOUNT FOUND EXITING!\n\n",ConsoleColor.Red, RandomNumber.BasicTextDelay());
         }
 
         private static void Init(string[] args)
@@ -30,17 +30,17 @@ namespace ConsoleApplication2
 
         private static void ListDir(string[] args)
         {
-            AiConsole.Write("\n Listing Current Working Directory...\n", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.Write(" COS/base/users/UNKNOWN/home", ConsoleColor.Blue, new Random().Next(500, 1000));
-            AiConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
+            AiConsole.Write("\n Listing Current Working Directory...\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.Write(" COS/base/users/UNKNOWN/home", ConsoleColor.Blue, RandomNumber.BasicTextDelay());
+            AiConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, RandomNumber.BasicTextDelay());
         }
 
         private static void List(string[] args)
         {
-            AiConsole.Write(" Listing contents of: ", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.Write("COS/base/users/UNKNOWN/home\n", ConsoleColor.Blue, new Random().Next(500, 1000));
-            AiConsole.Write("     config.txt           Documents            TotallyNotAMeme.PNG     \n     RUN_INIT.txt    ", ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.Write("\n Existing to prompt...\n\n ",ConsoleColor.White,new Random().Next(500,1000));
+            AiConsole.Write(" Listing contents of: ", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.Write("COS/base/users/UNKNOWN/home\n", ConsoleColor.Blue, RandomNumber.BasicTextDelay());
+            AiConsole.Write("     config.txt           Documents            TotallyNotAMeme.PNG     \n     RUN_INIT.txt    ", ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.Write("\n Existing to prompt...\n\n ",ConsoleColor.White, RandomNumber.BasicTextDelay());
             
         }
 
@@ -68,17 +68,17 @@ namespace ConsoleApplication2
             {
                 if (args[0] == "config.txt")
                 {
-                    AiConsole.Write("  Users: ERROR 451\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AiConsole.Write("  Permissions: NONE\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AiConsole.Write("  AI_status: OFFLINE\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AiConsole.Write("  Error_logging: False\n\n", ConsoleColor.White, new Random().Next(500, 1000));
-                    AiConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, new Random().Next(500, 1000));
+                    AiConsole.Write("  Users: ERROR 451\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+                    AiConsole.Write("  Permissions: NONE\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+                    AiConsole.Write("  AI_status: OFFLINE\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+                    AiConsole.Write("  Error_logging: False\n\n", ConsoleColor.White, RandomNumber.BasicTextDelay());
+                    AiConsole.Write("\n Existing to prompt...\n\n ", ConsoleColor.White, RandomNumber.BasicTextDelay());
                 }
 
                 else if (args[0] == "RUN_INIT.txt")
                 {
                     AiConsole.Write("  Run the init command.....\n Please\n I beg you\n\n", ConsoleColor.White,
-                        new Random().Next(500, 1000));
+                        RandomNumber.BasicTextDelay());
                 }
 
                 else
@@ -119,22 +119,22 @@ namespace ConsoleApplication2
             CommandProcessor.AddCommand("List", "Lists the contents of the current directory", List, CommandFlags.Default);
 
             //this is the beginning of the program itself.
-            AiConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, new Random().Next(500, 1000));
-            AiConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
-            AiConsole.Write(" [Loading core operating functions]...\n\n", new Random().Next(500, 1000));
-            AiConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
-            AiConsole.Write(" [Loading User space]...\n\n", new Random().Next(3000, 5000));
-            AiConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, new Random().Next(600, 1000));
-            AiConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
-            AiConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, new Random().Next(600, 1000));
+            AiConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, RandomNumber.BasicTextDelay());
+            AiConsole.Write(" {Success}\n\n", ConsoleColor.Green, RandomNumber.Between(1000, 1500));
+            AiConsole.Write(" [Loading core operating functions]...\n\n", RandomNumber.BasicTextDelay());
+            AiConsole.Write(" {Success}\n\n", ConsoleColor.Green, RandomNumber.Between(1000, 1500));
+            AiConsole.Write(" [Loading User space]...\n\n", RandomNumber.Between(3000, 5000));
+            AiConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, RandomNumber.Between(600, 1000));
+            AiConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, RandomNumber.Between(600, 1000));
+            AiConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, RandomNumber.Between(600, 1000));
 
             Console.Clear();
 
             AiConsole.Write(" Welcome to ");
-            AiConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan,new Random().Next(300,500));
+            AiConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan, RandomNumber.Between(300,500));
             AiConsole.Write(" Welcome ");
-            AiConsole.Write("<unkown>\n\n",ConsoleColor.Red, new Random().Next(300,500));
-            AiConsole.Write(" Type help on the next line to see a list of commands:\n\n", new Random().Next(300, 500));
+            AiConsole.Write("<unkown>\n\n",ConsoleColor.Red, RandomNumber.Between(300,500));
+            AiConsole.Write(" Type help on the next line to see a list of commands:\n\n", RandomNumber.Between(300, 500));
         
             //this while starts the command processor.
             while (true)
