@@ -68,7 +68,7 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Winux503 - Initial ideas and implementation\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" BLB - Being French\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" BLJ - Existing\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Tizzle - Being a G\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" Tizzle - Being a Gizzle\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" Jack - Being Scouse\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, 500, 1000);
