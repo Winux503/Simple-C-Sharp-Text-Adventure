@@ -1,98 +1,70 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
-using System.IO;
 using System.Media;
+using System.Reflection;
 
 namespace ConsoleApplication2
 {
-    static class AIConsole
+    internal static class AiConsole
     {
+        private static readonly SoundPlayer TypewriterSound = 
+            new SoundPlayer(Assembly.GetExecutingAssembly().GetManifestResourceStream("ConsoleApplication2.sound.Blip_Select3.wav"));
+
         //this is the remake of the Console.WriteLine(); function.
         //it has Thread.Sleep(); and ConsoleColor built in.
         //this has been done for both the Console.WriteLine and Console.Write functions.
-        public static void WriteLine(string Text, ConsoleColor Colour, int Delay)
+        public static void WriteLine(string text, ConsoleColor colour, int delay)
         {
             //add typewriter func here
-            Console.ForegroundColor = Colour;
-            //Console.WriteLine(Text);
-            //Console.ForegroundColor = ConsoleColor.White;
-            Thread.Sleep(Delay);
-            SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
-            for (int i = 0; i < Text.Length; i++)
+            Console.ForegroundColor = colour;
+            Thread.Sleep(delay);
+            foreach (var letter in text)
             {
-                Console.Write(Text[i]);
-                simpleSound.Play();
+                Console.Write(letter);
+                TypewriterSound.Play();
                 Thread.Sleep(50);
             }
         }
 
-        public static void WriteLine(string Text, ConsoleColor Colour)
+        public static void WriteLine(string text, ConsoleColor colour) => WriteLine(text, colour, 0);
+        
+        public static void WriteLine(string text, int delay)
         {
-            Console.ForegroundColor = Colour;
-            //Console.WriteLine(Text);
-            //Console.ForegroundColor = ConsoleColor.White;
-            SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
-            for (int i = 0; i < Text.Length; i++)
+            Thread.Sleep(delay);
+            foreach (var letter in text)
             {
-                Console.Write(Text[i]);
-                simpleSound.Play();
+                Console.Write(letter);
+                TypewriterSound.Play();
                 Thread.Sleep(50);
             }
         }
 
-        public static void WriteLine(string Text, int Delay)
-        {
-            //Console.WriteLine(Text);
-            Thread.Sleep(Delay);
-            SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
-            for (int i = 0; i < Text.Length; i++)
-            {
-                Console.Write(Text[i]);
-                simpleSound.Play();
-                Thread.Sleep(50);
-            }
-        }
+        public static void WriteLine(string text) => WriteLine(text, 0);
 
-        public static void WriteLine(string Text)
+        public static void Write(string text, ConsoleColor colour, int delay)
         {
-            //Console.WriteLine(Text);
-            SoundPlayer simpleSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
-            for (int i = 0; i < Text.Length; i++)
-            {
-                Console.Write(Text[i]);
-                simpleSound.Play();
-                Thread.Sleep(50);
-            }
-        }
-
-        public static void Write(string Text, ConsoleColor Colour, int Delay)
-        {
-            Console.ForegroundColor = Colour;
-            Console.Write(Text);
+            Console.ForegroundColor = colour;
+            Console.Write(text);
             Console.ForegroundColor = ConsoleColor.White;
-            Thread.Sleep(Delay);
+            Thread.Sleep(delay);
         }
 
-        public static void Write(string Text, ConsoleColor Colour)
+        public static void Write(string text, ConsoleColor colour)
         {
-            Console.ForegroundColor = Colour;
-            Console.Write(Text);
+            Console.ForegroundColor = colour;
+            Console.Write(text);
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public static void Write(string Text, int Delay)
+        public static void Write(string text, int delay)
         {
-            Console.Write(Text);
-            Thread.Sleep(Delay);
+            Console.Write(text);
+            Thread.Sleep(delay);
         }
 
-        public static void Write(string Text)
+        public static void Write(string text)
         {
-            Console.Write(Text);
+            Console.Write(text);
         }
     }
 }

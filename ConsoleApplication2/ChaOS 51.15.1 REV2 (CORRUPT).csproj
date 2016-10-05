@@ -60,19 +60,22 @@
   <ItemGroup>
     <Compile Include="AI.cs" />
     <Compile Include="Branch1.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandFlags.cs" />
     <Compile Include="CommandProcessor.cs" />
     <Compile Include="Console.cs" />
     <Compile Include="Graphics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sound\Blip_Select.wav" />
-    <Content Include="sound\Blip_Select2.wav" />
-    <Content Include="sound\Blip_Select3.wav" />
+    <EmbeddedResource Include="sound\Blip_Select.wav" />
+    <EmbeddedResource Include="sound\Blip_Select2.wav" />
+    <EmbeddedResource Include="sound\Blip_Select3.wav" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
