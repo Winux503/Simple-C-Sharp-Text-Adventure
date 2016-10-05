@@ -11,7 +11,7 @@ namespace ConsoleApplication2
 {
     class AI
     {
-        private static SoundPlayer ConsoleSound = new SoundPlayer(@"F:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
+       
 
         public static void initFunc()
         {
@@ -34,13 +34,14 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Tell me your name...\n\n", ConsoleColor.Cyan, 500, 1000);
             string Name = "";
             Name = Console.ReadLine();
-            AIConsole.WriteLine(Name, ConsoleColor.Magenta, 500, 1000);
+            AIConsole.WriteLine(" "+Name, ConsoleColor.Magenta);
             AIConsole.WriteLine(", Huh, that is a ", ConsoleColor.Cyan, 500, 1000);
             AIConsole.WriteLine("STUPID ", ConsoleColor.Red, 500, 1000);
             AIConsole.WriteLine("name :D\n\n", ConsoleColor.Cyan, 500, 1000);
             AIConsole.WriteLine(" So what brings you here?\n\n", ConsoleColor.Cyan, 500, 1000);
-
-
+            AIConsole.Write(" Your optirons are: \n\n 1. I found your text file\n 2. I was exiting random commands and found you\n 3. What are you?\n\n Enter the number that corrisonds to your answer on the line bellow\n\n", ConsoleColor.White, 500, 1000);
+            Branchs.Bras(Console.ReadLine());
+            
             
         }
         

@@ -51,8 +51,8 @@ namespace ConsoleApplication2
             {
                 for (int o = 0; o < 60; o++)
                 {
-                    Console.ForegroundColor = Colours[new Random().Next(0, 6)];
                     Console.BackgroundColor = Colours[new Random().Next(0, 6)];
+                    Console.ForegroundColor = Colours[new Random().Next(0, 6)];
                     WriteAt("m", i, o);
                     Console.WriteLine();
                     Thread.Sleep(new Random().Next(1,5));
