@@ -73,9 +73,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sound\Blip_Select.wav" />
-    <Content Include="sound\Blip_Select2.wav" />
-    <Content Include="sound\Blip_Select3.wav" />
+    <EmbeddedResource Include="sound\Blip_Select.wav" />
+    <EmbeddedResource Include="sound\Blip_Select2.wav" />
+    <EmbeddedResource Include="sound\Blip_Select3.wav" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

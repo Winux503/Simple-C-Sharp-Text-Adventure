@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Threading;
 using System.Media;
+using System.Reflection;
 
 namespace ConsoleApplication2
 {
     internal static class AiConsole
     {
-        private static readonly SoundPlayer _typewriterSound = new SoundPlayer(@"E:\ConsoleApplication2\ConsoleApplication2\sound\Blip_Select3.wav");
+        private static readonly SoundPlayer TypewriterSound = 
+            new SoundPlayer(Assembly.GetExecutingAssembly().GetManifestResourceStream("ConsoleApplication2.sound.Blip_Select3.wav"));
 
         //this is the remake of the Console.WriteLine(); function.
         //it has Thread.Sleep(); and ConsoleColor built in.
@@ -19,7 +21,7 @@ namespace ConsoleApplication2
             foreach (var letter in text)
             {
                 Console.Write(letter);
-                _typewriterSound.Play();
+                TypewriterSound.Play();
                 Thread.Sleep(50);
             }
         }
@@ -32,7 +34,7 @@ namespace ConsoleApplication2
             foreach (var letter in text)
             {
                 Console.Write(letter);
-                _typewriterSound.Play();
+                TypewriterSound.Play();
                 Thread.Sleep(50);
             }
         }
