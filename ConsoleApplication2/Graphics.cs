@@ -62,7 +62,7 @@ namespace ConsoleApplication2
             Console.SetCursorPosition(0,0);
             AIConsole.WriteLine(" \n----------------------------Credits----------------------------\n\n", ConsoleColor.White,500,1000);
             AIConsole.WriteLine(" iMoD1998 - Cronstuction of the new Console commands and ideas\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" tfm - Troubleshooting and testing\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" tfm - Grumbler\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" Squad Chat - \"Morale Support\"\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" MLP - Ideas and assistance\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" Winux503 - Initial ideas and implementation\n\n", ConsoleColor.White, 500, 1000);

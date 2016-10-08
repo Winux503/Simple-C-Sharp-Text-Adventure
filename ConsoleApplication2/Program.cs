@@ -11,6 +11,8 @@ namespace ConsoleApplication2
 {
     class Program
     {
+        
+        
         // This is an example command.
         // All commans are stored in a separate function
         private static void ExampleCommand(string[] Args)
@@ -105,6 +107,11 @@ namespace ConsoleApplication2
 
         static void Main(string[] args)
         {
+            //Sets the file system defaults.
+            /*Filesystem.Files();
+            Filesystem.Folders();
+            Filesystem.Handler();*/
+
             /*Add Commands*/
             //this section is where the commands are added.
             //they all have a description, a name and some flags

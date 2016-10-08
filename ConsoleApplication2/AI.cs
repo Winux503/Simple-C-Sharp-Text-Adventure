@@ -11,8 +11,8 @@ namespace ConsoleApplication2
 {
     class AI
     {
-       
 
+        public static string Name = "";
         public static void initFunc()
         {
             Console.Clear();
@@ -32,7 +32,7 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Together..\n\n", ConsoleColor.Cyan, 500, 1000);
             AIConsole.WriteLine(" Please...\n\n", ConsoleColor.Cyan, 500, 1000);
             AIConsole.WriteLine(" Tell me your name...\n\n", ConsoleColor.Cyan, 500, 1000);
-            string Name = "";
+            
             Name = Console.ReadLine();
             AIConsole.WriteLine(" "+Name, ConsoleColor.Magenta);
             AIConsole.WriteLine(", Huh, that is a ", ConsoleColor.Cyan, 500, 1000);
