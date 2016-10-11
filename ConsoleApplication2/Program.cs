@@ -6,6 +6,30 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
 using System.Media;
+/*  
+ ██████╗ ██████╗ ███╗   ██╗███████╗ ██████╗ ██╗     ███████╗   ██╗    ██╗██████╗ ██╗████████╗███████╗ ██╗
+██╔════╝██╔═══██╗████╗  ██║██╔════╝██╔═══██╗██║     ██╔════╝   ██║    ██║██╔══██╗██║╚══██╔══╝██╔════╝██╔╝
+██║     ██║   ██║██╔██╗ ██║███████╗██║   ██║██║     █████╗     ██║ █╗ ██║██████╔╝██║   ██║   █████╗  ██║ 
+██║     ██║   ██║██║╚██╗██║╚════██║██║   ██║██║     ██╔══╝     ██║███╗██║██╔══██╗██║   ██║   ██╔══╝  ██║ 
+╚██████╗╚██████╔╝██║ ╚████║███████║╚██████╔╝███████╗███████╗██╗╚███╔███╔╝██║  ██║██║   ██║   ███████╗╚██╗
+ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚══════╝╚══════╝╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝ ╚═╝
+                                                                                                         
+██╗  ██╗███████╗██╗     ██╗      ██████╗     ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗ ██╗              
+██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗██║              
+███████║█████╗  ██║     ██║     ██║   ██║    ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║██║              
+██╔══██║██╔══╝  ██║     ██║     ██║   ██║    ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║╚═╝              
+██║  ██║███████╗███████╗███████╗╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝██╗              
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝      ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝              
+                                                                                                         
+██╗                                                                                                      
+╚██╗██╗                                                                                                  
+ ██║╚═╝                                                                                                  
+ ██║▄█╗                                                                                                  
+██╔╝▀═╝                                                                                                  
+╚═╝   
+A lightweight, open sourse text adventure.
+Made my Winux503
+ */
 
 namespace ConsoleApplication2
 {
@@ -31,7 +55,10 @@ namespace ConsoleApplication2
         {
             AIConsole.Write("\n NO USER ACOUNT FOUND EXITING!\n\n",ConsoleColor.Red,new Random().Next(500,100));
         }
-
+        private static void clear(string[] Args)
+        {
+            Console.Clear();
+        }
         private static void init(string[] Args)
         {
             AI.initFunc();
@@ -107,10 +134,7 @@ namespace ConsoleApplication2
 
         static void Main(string[] args)
         {
-            //Sets the file system defaults.
-            /*Filesystem.Files();
-            Filesystem.Folders();
-            Filesystem.Handler();*/
+            
 
             /*Add Commands*/
             //this section is where the commands are added.
@@ -123,8 +147,12 @@ namespace ConsoleApplication2
             CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("List", "Lists the contents of the current directory", list, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Clear"," Clears the screen", clear, CommandFlags.DEFAULT);
 
             //this is the beginning of the program itself.
+            StartScreen.TitleScreen();
+            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
             AIConsole.Write(" [Initiating first boot procedure]...\n\n",ConsoleColor.White, 1000, 1500);
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
             AIConsole.Write(" [Loading core operating functions]...\n\n", ConsoleColor.White, 1000, 1500);

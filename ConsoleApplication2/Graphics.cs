@@ -55,7 +55,7 @@ namespace ConsoleApplication2
                     Console.ForegroundColor = Colours[new Random().Next(0, 6)];
                     WriteAt("m", i, o);
                     Console.WriteLine();
-                    Thread.Sleep(new Random().Next(1,5));
+                    //Thread.Sleep(new Random().Next(1,5));
                 }
             }
             Console.ResetColor();
