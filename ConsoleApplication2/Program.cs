@@ -49,7 +49,11 @@ namespace ConsoleApplication2
             //AIConsole is a separate function that combines Console.Write, ConsoleColor and Thread.Sleep.
             GraphicsCon.GMain();
         }
-
+        private static void Exit(string[] Args)
+        {
+            //AIConsole is a separate function that combines Console.Write, ConsoleColor and Thread.Sleep.
+            Environment.Exit(0);
+        }
 
         private static void user(string[] Args)
         {
@@ -134,17 +138,18 @@ namespace ConsoleApplication2
 
         static void Main(string[] args)
         {
-            
+
 
             /*Add Commands*/
             //this section is where the commands are added.
             //they all have a description, a name and some flags
-            CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Exit", "Exits the console", Exit, CommandFlags.DEFAULT);
+            //CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Credits", "Shows the people who made this", Credits, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("init", "<command description not found>", init, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Read", "Prints the contents of a text file to the screen", Read, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("ListDir", "List the current working directory", listdir, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
+            //CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("List", "Lists the contents of the current directory", list, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Clear"," Clears the screen", clear, CommandFlags.DEFAULT);

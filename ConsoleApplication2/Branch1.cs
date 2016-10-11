@@ -55,7 +55,8 @@ namespace ConsoleApplication2
                     switch (Input)
                     {
                         case 1:
-
+                            AIConsole.WriteLine(" I told you, it was a bug, now don't ask again...\n\n", ConsoleColor.Cyan, 500, 1000);
+                            AIConsole.WriteLine(" I T  W A S  M E,  W H A T  A R E  Y O U  S T U P I D ! ?\n\n", ConsoleColor.Red, 500, 1000);
                             break;
                         case 2:
 
@@ -82,7 +83,8 @@ namespace ConsoleApplication2
                     switch (Input)
                     {
                         case 1:
-
+                            AIConsole.WriteLine(" I told you, it was a bug, now don't ask again...\n\n", ConsoleColor.Cyan, 500, 1000);
+                            AIConsole.WriteLine(" I T  W A S  M E,  W H A T  A R E  Y O U  S T U P I D ! ?\n\n", ConsoleColor.Red, 500, 1000);
                             break;
                         case 2:
 

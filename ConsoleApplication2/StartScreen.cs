@@ -79,25 +79,7 @@ namespace ConsoleApplication2
             Thread.Sleep(1000);
             
         
-            /*GraphicsEngine("-", 0, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 1, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 2, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 3, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 4, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 5, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 6, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 7, 0);
-            Thread.Sleep(100);
-            GraphicsEngine("-", 8, 0);
-            Thread.Sleep(5000);
-            Console.Clear();*/
+            
         }
         public static void TypeWriter(string Text)
         {
