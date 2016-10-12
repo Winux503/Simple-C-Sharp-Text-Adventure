@@ -37,7 +37,6 @@ namespace ConsoleApplication2
 
         }
 
-
         public static void GMain()
         {
             ConsoleColor[] Colours = {
@@ -63,7 +62,6 @@ namespace ConsoleApplication2
                     Thread.Sleep(new Random().Next(1,5));
                 }
             }
-            
             Console.ResetColor();
             Console.SetCursorPosition(0,0);
             AIConsole.WriteLine(" \n----------------------------Credits----------------------------\n\n", ConsoleColor.White,500,1000);
@@ -82,8 +80,10 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Druaga1 - Providing the music \n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" ----------------------------Credits----------------------------\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine("Press enter to continue...\n\n",ConsoleColor.White);
+            SoundPlayer Sound = new SoundPlayer(path2);
+            new Thread(() => Sound.Play()).Start();
             Console.ReadLine();
-           
+            Sound.Stop();
             Console.Clear();
         }
     }

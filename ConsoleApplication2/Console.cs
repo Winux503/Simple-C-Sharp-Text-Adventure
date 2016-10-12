@@ -18,8 +18,7 @@ namespace ConsoleApplication2
         public static string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
         public static string fileName2 = "intro.wav";
         public static string path2 = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName2);
-        public static bool Playing = false;
-       
+        
         
        
         //this is the remake of the Console.WriteLine(); function.
@@ -27,39 +26,18 @@ namespace ConsoleApplication2
         //this has been done for both the Console.WriteLine and Console.Write functions.
         public static void WriteLine(string Text, ConsoleColor Colour, int Delay1, int Delay2)
         {
-            if (Playing == true)
+            //add typewriter func here
+            Console.ForegroundColor = Colour;
+            //Console.WriteLine(Text);
+            //Console.ForegroundColor = ConsoleColor.White;
+            Thread.Sleep(new Random().Next(Delay1, Delay2));
+            SoundPlayer simpleSound = new SoundPlayer(path);
+            for (int i = 0; i < Text.Length; i++)
             {
-                //add typewriter func here
-                Console.ForegroundColor = Colour;
-                //Console.WriteLine(Text);
-                //Console.ForegroundColor = ConsoleColor.White;
-                Thread.Sleep(new Random().Next(Delay1, Delay2));
-                SoundPlayer simpleSound = new SoundPlayer(path);
-                for (int i = 0; i < Text.Length; i++)
-                {
-                    Console.Write(Text[i]);
-                    new Thread(() => simpleSound.Play()).Start();
-                    Thread.Sleep(50);
-                }
-            }
-            else
-            {
-                SoundPlayer Sound = new SoundPlayer(path2);
-                new Thread(() => Sound.Play()).Start();
-                Playing = true;
-                Console.ForegroundColor = Colour;
-                //Console.WriteLine(Text);
-                //Console.ForegroundColor = ConsoleColor.White;
-                Thread.Sleep(new Random().Next(Delay1, Delay2));
-                SoundPlayer simpleSound = new SoundPlayer(path);
-                for (int i = 0; i < Text.Length; i++)
-                {
-                    Console.Write(Text[i]);
-                    new Thread(() => simpleSound.Play()).Start();
-                    Thread.Sleep(50);
-                }
-                
-            }
+                Console.Write(Text[i]);
+                new Thread(() => simpleSound.Play()).Start();
+                Thread.Sleep(50);
+            }    
         }
 
         public static void WriteLine(string Text, ConsoleColor Colour)
