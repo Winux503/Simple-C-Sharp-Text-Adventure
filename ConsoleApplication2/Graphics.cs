@@ -11,6 +11,10 @@ namespace ConsoleApplication2
 {
     class GraphicsCon
     {
+        public static string fileName = "intro.wav";
+        public static string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+        public static string fileName2 = "intro.wav";
+        public static string path2 = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName2);
         private static void DrawCredits()
         {
 
@@ -45,19 +49,21 @@ namespace ConsoleApplication2
             ConsoleColor.Yellow
             };
             Console.Clear();
+            AIConsole.WriteLine("", ConsoleColor.White,500,1000);
             origRow = Console.CursorTop;
             origCol = Console.CursorLeft;
-            for (int i = 0; i < 120; i++)
+            for (int Width = 0; Width < Console.WindowWidth; ++Width)
             {
-                for (int o = 0; o < 60; o++)
+                for (int Height = 0; Height < Console.WindowHeight; ++Height)
                 {
                     Console.BackgroundColor = Colours[new Random().Next(0, 6)];
                     Console.ForegroundColor = Colours[new Random().Next(0, 6)];
-                    WriteAt("m", i, o);
+                    WriteAt("m", Width, Height);
                     Console.WriteLine();
-                    //Thread.Sleep(new Random().Next(1,5));
+                    Thread.Sleep(new Random().Next(1,5));
                 }
             }
+            
             Console.ResetColor();
             Console.SetCursorPosition(0,0);
             AIConsole.WriteLine(" \n----------------------------Credits----------------------------\n\n", ConsoleColor.White,500,1000);
@@ -73,8 +79,12 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" /r/csharp - Being kind and suggesting ideas \n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" Druaga1 - Providing the music \n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" ----------------------------Credits----------------------------\n\n", ConsoleColor.White, 500, 1000);
-            
+            AIConsole.WriteLine("Press enter to continue...\n\n",ConsoleColor.White);
+            Console.ReadLine();
+           
+            Console.Clear();
         }
     }
 }

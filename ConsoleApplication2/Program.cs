@@ -27,7 +27,7 @@ using System.Media;
  ██║▄█╗                                                                                                  
 ██╔╝▀═╝                                                                                                  
 ╚═╝   
-A lightweight, open sourse text adventure.
+A lightweight, open source text adventure.
 Made my Winux503
  */
 

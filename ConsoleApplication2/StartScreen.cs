@@ -11,7 +11,7 @@ namespace ConsoleApplication2
 {
     class StartScreen
     {
-        public static string fileName = "Blip_Select3.wav";
+        public static string fileName = "intro.wav";
         public static string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
         public static int origRow;
         public static int origCol;
@@ -55,31 +55,35 @@ namespace ConsoleApplication2
 ╚═╝                                                                                                      
 ";
             ConsoleColor[] Colours = {
-            ConsoleColor.Blue,
-            ConsoleColor.Cyan,
-            ConsoleColor.Green,
-            ConsoleColor.Magenta,
-            ConsoleColor.Yellow
+                ConsoleColor.Blue,
+                ConsoleColor.Cyan,
+                ConsoleColor.Green,
+                ConsoleColor.Magenta,
+                ConsoleColor.Yellow,
+                ConsoleColor.Red
             };
             origRow = Console.CursorTop;
             origCol = Console.CursorLeft;
-            for (int i = 0; i < 120; i++)
+            SoundPlayer simpleSound = new SoundPlayer(path);
+            simpleSound.Play();
+            for (int Width = 0; Width < Console.WindowWidth; ++Width)
             {
-                for (int o = 0; o < 60; o++)
+                for (int Height = 0; Height < Console.WindowHeight; ++Height)
                 {
-                    Console.BackgroundColor = Colours[new Random().Next(0, 5)];
-                    
-                    GraphicsEngine(" ", i, o);
+                    Console.BackgroundColor = Colours[new Random().Next(0, 6)];
+                    GraphicsEngine(" ", Width, Height);
                     Console.WriteLine();
-                    //Thread.Sleep(new Random().Next(1,5));
+                    Thread.Sleep(new Random().Next(1,5));
                 }
             }
             Console.SetCursorPosition(0, 0);
+            Console.ResetColor();
             TypeWriter(Logo);
             Thread.Sleep(1000);
-            
-        
-            
+            Console.ResetColor();
+            TypeWriter("Press enter to continue...\n\n");
+            Console.ReadLine();
+            simpleSound.Stop();
         }
         public static void TypeWriter(string Text)
         {
@@ -87,7 +91,7 @@ namespace ConsoleApplication2
             for (int i = 0; i < Text.Length; i++)
             {
                 Console.Write(Text[i]);
-                simpleSound.Play();
+                //simpleSound.Play();
                 Thread.Sleep(5);
             }
         }
