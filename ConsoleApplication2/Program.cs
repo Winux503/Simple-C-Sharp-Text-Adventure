@@ -166,6 +166,11 @@ namespace ConsoleApplication2
             AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, 600, 1000);
             AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, 600, 1000);
             AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
+            AIConsole.Write(" [Preforming final system check]\n\n", ConsoleColor.White, 600, 1000);
+            AIConsole.Write(" {Completed}\n\n", ConsoleColor.Green, 600, 1000);
+            AIConsole.Write(" [Starting all system functions]\n\n", ConsoleColor.White, 600, 1000);
+            AIConsole.Write(" {Complete}\n\n", ConsoleColor.Green, 600, 1000);
+            AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
             Console.Clear();
             AIConsole.Write(" Welcome to ");
             AIConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan, 300, 500);
