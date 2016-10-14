@@ -57,7 +57,7 @@ namespace ConsoleApplication2
                 {
                     Console.BackgroundColor = Colours[new Random().Next(0, 6)];
                     Console.ForegroundColor = Colours[new Random().Next(0, 6)];
-                    WriteAt("m", Width, Height);
+                    WriteAt(" ", Width, Height);
                     Console.WriteLine();
                     Thread.Sleep(new Random().Next(1,5));
                 }
@@ -77,11 +77,13 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" /r/csharp - Being kind and suggesting ideas \n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" C# Discord chat - putting up with my stupid questions \n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" Druaga1 - Providing the music \n\n", ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" ----------------------------Credits----------------------------\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine("Press enter to continue...\n\n",ConsoleColor.White);
+            AIConsole.WriteLine(" Now enjoy some of Druaga1's music...\n\n", ConsoleColor.White);
+            AIConsole.WriteLine(" Press enter to continue...\n\n", ConsoleColor.White);
             SoundPlayer Sound = new SoundPlayer(path2);
-            new Thread(() => Sound.Play()).Start();
+            Sound.Play();
             Console.ReadLine();
             Sound.Stop();
             Console.Clear();

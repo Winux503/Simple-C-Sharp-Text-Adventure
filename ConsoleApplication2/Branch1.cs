@@ -60,7 +60,7 @@ namespace ConsoleApplication2
                             AIConsole.WriteLine(" I T  W A S  M E,  W H A T  A R E  Y O U  S T U P I D ! ?\n\n", ConsoleColor.Red, 500, 1000);
                             break;
                         case 2:
-
+                            
                             break;
 
                         case 3:

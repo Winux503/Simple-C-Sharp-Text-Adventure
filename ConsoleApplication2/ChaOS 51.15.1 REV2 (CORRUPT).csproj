@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="AI.cs" />
     <Compile Include="Branch1.cs" />
+    <Compile Include="Calc.cs" />
     <Compile Include="CommandProcessor.cs" />
     <Compile Include="Console.cs" />
     <Compile Include="Graphics.cs" />

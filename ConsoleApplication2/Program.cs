@@ -82,7 +82,86 @@ namespace ConsoleApplication2
             AIConsole.Write("\n Existing to prompt...\n\n ",ConsoleColor.White,new Random().Next(500,1000));
             
         }
+        private static void Music(string[] Args)
+        {
+            AIConsole.Write(" The loaded songs are:\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" lolirl.wav\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" docsis.wav\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" heartchakra.wav\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" building2013.wav\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" resistance.wav\n\n", ConsoleColor.White, 500, 1000);
 
+
+            if (Args != null)
+            {
+                if (Args[0] == "lolirl.wav")
+                {
+                    string fileName = "intro.wav";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+                    SoundPlayer Sound = new SoundPlayer(path);
+                    Sound.PlayLooping();
+                    AIConsole.Write(" Song Playing, Press enter to stop the song");
+                    Console.ReadLine();
+                    Sound.Stop();
+                }
+                else if (Args[0] == "docsis.wav")
+                {
+                    string fileName = "intro.wav";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+                    SoundPlayer Sound = new SoundPlayer(path);
+                    Sound.PlayLooping();
+                    AIConsole.Write(" Song Playing, Press enter to stop the song");
+                    Console.ReadLine();
+                    Sound.Stop();
+                }
+                else if (Args[0] == "heartchakra.wav")
+                {
+                    string fileName = "intro.wav";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+                    SoundPlayer Sound = new SoundPlayer(path);
+                    Sound.PlayLooping();
+                    AIConsole.Write(" Song Playing, Press enter to stop the song");
+                    Console.ReadLine();
+                    Sound.Stop();
+                }
+                else if (Args[0] == "building2013.wav")
+                {
+                    string fileName = "intro.wav";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+                    SoundPlayer Sound = new SoundPlayer(path);
+                    Sound.PlayLooping();
+                    AIConsole.Write(" Song Playing, Press enter to stop the song");
+                    Console.ReadLine();
+                    Sound.Stop();
+                }
+                else if (Args[0] == "resistance.wav")
+                {
+                    string fileName = "intro.wav";
+                    string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+                    SoundPlayer Sound = new SoundPlayer(path);
+                    Sound.PlayLooping();
+                    AIConsole.Write(" Song Playing, Press enter to stop the song");
+                    Console.ReadLine();
+                    Sound.Stop();
+                }
+                else
+                {
+                    AIConsole.Write(" Please enter a valid song name, it has to be exact to the name in the list above\n\n");
+                }
+            }
+            else
+            {
+                AIConsole.Write(" Please enter a valid song name, it has to be exact to the name in the list above\n\n");
+                AIConsole.Write(" Type music followed by a song name to play the song\n\n");
+            }
+            
+
+
+        }
+        private static void calculator(string[] Args)
+        {
+            Calc.calc();
+        }
         //commands can accept arguments for extendended functionality. 
         private static void ExampleCommandArgs(string[] Args)
         {
@@ -143,6 +222,8 @@ namespace ConsoleApplication2
             /*Add Commands*/
             //this section is where the commands are added.
             //they all have a description, a name and some flags
+            CommandProcessor.AddCommand("Music", "A simple music player", Music, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Calc", "A simple calculator", calculator, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Exit", "Exits the console", Exit, CommandFlags.DEFAULT);
             //CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Credits", "Shows the people who made this", Credits, CommandFlags.DEFAULT);
