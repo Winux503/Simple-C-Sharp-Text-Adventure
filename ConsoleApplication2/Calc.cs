@@ -13,7 +13,7 @@ namespace ConsoleApplication2
             int numberOne;
             string Mod;
             int numberTwo;
-            AIConsole.Write(" \nWelcome to the basic calculator application\n\n",ConsoleColor.White,500,1000);
+            AIConsole.Write(" \nWelcome to the Simple calculator application\n\n",ConsoleColor.White,500,1000);
             AIConsole.Write(" \nPlease enter the first number\n\n", ConsoleColor.White, 500, 1000);
             numberOne = int.Parse(Console.ReadLine());
             AIConsole.Write(" \nPlease enter the modifier\n\n", ConsoleColor.White, 500, 1000);

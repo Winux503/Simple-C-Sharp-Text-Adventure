@@ -152,11 +152,15 @@ namespace ConsoleApplication2
             else
             {
                 AIConsole.Write(" Please enter a valid song name, it has to be exact to the name in the list above\n\n");
-                AIConsole.Write(" Type music followed by a song name to play the song\n\n");
+                AIConsole.Write(" Type smusic followed by a song name to play the song\n\n");
             }
             
 
 
+        }
+        private static void write(string[] Args)
+        {
+            Writer.write();
         }
         private static void calculator(string[] Args)
         {
@@ -222,17 +226,18 @@ namespace ConsoleApplication2
             /*Add Commands*/
             //this section is where the commands are added.
             //they all have a description, a name and some flags
-            CommandProcessor.AddCommand("Music", "A simple music player", Music, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Calc", "A simple calculator", calculator, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Exit", "Exits the console", Exit, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Swrite", " Simple document writer", write, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Smusic", " Simple music player", Music, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Scalc", " Simple calculator", calculator, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Exit", " Exits the console", Exit, CommandFlags.DEFAULT);
             //CommandProcessor.AddCommand("Test", "Example Command", ExampleCommand, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Credits", "Shows the people who made this", Credits, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("init", "<command description not found>", init, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Read", "Prints the contents of a text file to the screen", Read, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("ListDir", "List the current working directory", listdir, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("init", " <command description not found>", init, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Read", " Prints the contents of a text file to the screen", Read, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("ListDir"," List the current working directory", listdir, CommandFlags.DEFAULT);
             //CommandProcessor.AddCommand("TestArgs", "Example Command For Args", ExampleCommandArgs, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("Help", "Shows Commands", Help, CommandFlags.DEFAULT);
-            CommandProcessor.AddCommand("List", "Lists the contents of the current directory", list, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("Help", " Shows Commands", Help, CommandFlags.DEFAULT);
+            CommandProcessor.AddCommand("List", " Lists the contents of the current directory", list, CommandFlags.DEFAULT);
             CommandProcessor.AddCommand("Clear"," Clears the screen", clear, CommandFlags.DEFAULT);
 
             //this is the beginning of the program itself.
@@ -243,13 +248,17 @@ namespace ConsoleApplication2
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
             AIConsole.Write(" [Loading core operating functions]...\n\n", ConsoleColor.White, 1000, 1500);
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, 1000, 1500);
+            AIConsole.Write(" [Checking for updates]...\n\n", ConsoleColor.White, 1000, 1500);
+            AIConsole.Write(" [3000 new updates found]...\n\n", ConsoleColor.White, 1000, 1500);
+            AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, 600, 1000);
+            AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
             AIConsole.Write(" [Loading User space]...\n\n", ConsoleColor.White,  3000, 5000);
             AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, 600, 1000);
             AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, 600, 1000);
             AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
-            AIConsole.Write(" [Preforming final system check]\n\n", ConsoleColor.White, 600, 1000);
+            AIConsole.Write(" [Preforming final system checks]...\n\n", ConsoleColor.White, 600, 1000);
             AIConsole.Write(" {Completed}\n\n", ConsoleColor.Green, 600, 1000);
-            AIConsole.Write(" [Starting all system functions]\n\n", ConsoleColor.White, 600, 1000);
+            AIConsole.Write(" [Starting all system functions]...\n\n", ConsoleColor.White, 600, 1000);
             AIConsole.Write(" {Complete}\n\n", ConsoleColor.Green, 600, 1000);
             AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
             Console.Clear();
@@ -257,6 +266,7 @@ namespace ConsoleApplication2
             AIConsole.Write("ChaOS V. 50.15.1 REV2\n", ConsoleColor.Cyan, 300, 500);
             AIConsole.Write(" Welcome ");
             AIConsole.Write("<unkown>\n\n",ConsoleColor.Red, 300, 500);
+            AIConsole.Write(" The Simple Software Suite is installed\n", ConsoleColor.White, 300, 500);
             AIConsole.Write(" Type help on the next line to see a list of commands:\n\n", ConsoleColor.White, 300, 500);
         
             //this while starts the command processor.
