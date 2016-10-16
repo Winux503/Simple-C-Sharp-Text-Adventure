@@ -40,8 +40,6 @@ namespace ConsoleApplication2
             AIConsole.WriteLine(" So what brings you here?\n\n", ConsoleColor.Cyan, 500, 1000);
             AIConsole.Write(" Your optirons are: \n\n 1. I found your text file\n 2. I was exiting random commands and found you\n 3. What are you?\n\n Enter the number that corrisonds to your answer on the line bellow\n\n", ConsoleColor.White, 500, 1000);
             Branchs.Bras(int.Parse(Console.ReadLine()));
-            
-            
         }
         
     }
