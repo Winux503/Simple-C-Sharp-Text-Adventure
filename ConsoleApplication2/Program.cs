@@ -35,8 +35,9 @@ namespace ConsoleApplication2
 {
     class Program
     {
-        
-        
+
+        private static int counter;
+        private static string count;
         // This is an example command.
         // All commans are stored in a separate function
         private static void ExampleCommand(string[] Args)
@@ -218,7 +219,15 @@ namespace ConsoleApplication2
                 AIConsole.Write(" " + Command.Name + " - " + Command.Description + "\n");
             }
         }
-
+        private static void counterFunc()
+        {
+            for (counter = 0;  counter < 3000;)
+            {
+                counter++;
+                Thread.Sleep(new Random().Next(1, 5));
+                AIConsole.Write(" {Downloading " + counter + " of 3000 updates}\n\n", ConsoleColor.Cyan);
+            }
+        }
         static void Main(string[] args)
         {
 
@@ -250,7 +259,9 @@ namespace ConsoleApplication2
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, 1000, 1500);
             AIConsole.Write(" [Checking for updates]...\n\n", ConsoleColor.White, 1000, 1500);
             AIConsole.Write(" [3000 new updates found]...\n\n", ConsoleColor.White, 1000, 1500);
-            AIConsole.Write(" {Ignoring}\n\n", ConsoleColor.Green, 600, 1000);
+            counterFunc();
+            AIConsole.Write(" {Complete}\n\n", ConsoleColor.Green, 600, 1000);
+            //AIConsole.Write(" {Downloading "+ counter +"of 3000 updates}\n\n", ConsoleColor.Green, 600, 1000);
             AIConsole.Write(" {Continuing}\n\n", ConsoleColor.Green, 600, 1000);
             AIConsole.Write(" [Loading User space]...\n\n", ConsoleColor.White,  3000, 5000);
             AIConsole.Write(" [ERROR 451 - NO USERS FOUND] \n\n",ConsoleColor.Red, 600, 1000);

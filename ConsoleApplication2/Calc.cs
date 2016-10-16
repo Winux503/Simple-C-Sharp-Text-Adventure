@@ -16,36 +16,37 @@ namespace ConsoleApplication2
             AIConsole.Write(" \nWelcome to the Simple calculator application\n\n",ConsoleColor.White,500,1000);
             AIConsole.Write(" \nPlease enter the first number\n\n", ConsoleColor.White, 500, 1000);
             numberOne = int.Parse(Console.ReadLine());
-            AIConsole.Write(" \nPlease enter the modifier\n\n", ConsoleColor.White, 500, 1000);
-            Mod = Console.ReadLine();
             AIConsole.Write(" \nPlease enter the second number\n\n", ConsoleColor.White, 500, 1000);
             numberTwo = int.Parse(Console.ReadLine());
-            
-            int output;
+            AIConsole.Write(" \nPlease enter the modifier\n\n", ConsoleColor.White, 500, 1000);
+            Mod = Console.ReadLine();
+
+            int output = 0;
             if (Mod == "+")
             {
                 output = numberOne + numberTwo;
-                AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
+                
             }
             else if(Mod == "-")
             {
                 output = numberOne - numberTwo;
-                AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
+                //AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
             }
             else if(Mod == "*")
             {
                 output = numberOne * numberTwo;
-                AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
+                //AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
             }
             else if (Mod == "/")
             {
                 output = numberOne / numberTwo;
-                AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
+                //AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
             }
             else
             {
                 AIConsole.Write("Please enter a Valid modifier");
             }
+            AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
         }
     }
 }
