@@ -10,41 +10,41 @@ namespace ConsoleApplication2
     {
         public static void calc()
         {
-            int numberOne;
-            string Mod;
-            int numberTwo;
-            AIConsole.Write(" \nWelcome to the Simple calculator application\n\n",ConsoleColor.White,500,1000);
-            AIConsole.Write(" \nPlease enter the first number\n\n", ConsoleColor.White, 500, 1000);
-            numberOne = int.Parse(Console.ReadLine());
-            AIConsole.Write(" \nPlease enter the second number\n\n", ConsoleColor.White, 500, 1000);
-            numberTwo = int.Parse(Console.ReadLine());
-            AIConsole.Write(" \nPlease enter the modifier\n\n", ConsoleColor.White, 500, 1000);
-            Mod = Console.ReadLine();
 
             int output = 0;
-            if (Mod == "+")
+            string Input = "";
+            int numberOne;
+            //string Mod;
+            int numberTwo;
+            AIConsole.Write(" \nWelcome to the Simple calculator application\n\n",ConsoleColor.White,500,1000);
+            AIConsole.Write(" \nPlease enter the calculation\n\n", ConsoleColor.White, 500, 1000);
+            Input = Console.ReadLine();
+            if (Input.Contains('+'))
             {
+                string[] numbers = Input.Split('+');
+                numberOne = Convert.ToInt32(numbers[0]);
+                numberTwo = Convert.ToInt32(numbers[1]);
                 output = numberOne + numberTwo;
-                
-            }
-            else if(Mod == "-")
+            }else if (Input.Contains('-'))
             {
+                string[] numbers = Input.Split('-');
+                numberOne = Convert.ToInt32(numbers[0]);
+                numberTwo = Convert.ToInt32(numbers[1]);
                 output = numberOne - numberTwo;
-                //AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
             }
-            else if(Mod == "*")
+            else if (Input.Contains('/'))
             {
-                output = numberOne * numberTwo;
-                //AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
-            }
-            else if (Mod == "/")
-            {
+                string[] numbers = Input.Split('/');
+                numberOne = Convert.ToInt32(numbers[0]);
+                numberTwo = Convert.ToInt32(numbers[1]);
                 output = numberOne / numberTwo;
-                //AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
             }
-            else
+            else if (Input.Contains('*'))
             {
-                AIConsole.Write("Please enter a Valid modifier");
+                string[] numbers = Input.Split('*');
+                numberOne = Convert.ToInt32(numbers[0]);
+                numberTwo = Convert.ToInt32(numbers[1]);
+                output = numberOne * numberTwo;
             }
             AIConsole.Write(" \nThe answer is: " + output, ConsoleColor.White, 500, 1000);
         }

@@ -15,7 +15,7 @@ namespace ConsoleApplication2
             AIConsole.Write(" Saving has been disabled sue to a user space error\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.Write(" To start typing just type on the line below\n\n", ConsoleColor.White, 500, 1000);
             AIConsole.Write(" Type \\ to quit\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.Write(" \n\n____________________________________________________unamed.txt____________________________________________________\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" \n\n_______________________________________________________unamed.txt_______________________________________________________\n\n", ConsoleColor.White, 500, 1000);
             StringBuilder sb = new StringBuilder();
             while (true)
             {

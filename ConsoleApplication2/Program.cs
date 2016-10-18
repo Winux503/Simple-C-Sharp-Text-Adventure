@@ -37,7 +37,7 @@ namespace ConsoleApplication2
     {
 
         private static int counter;
-        private static string count;
+        //private static string count;
         // This is an example command.
         // All commans are stored in a separate function
         private static void ExampleCommand(string[] Args)
