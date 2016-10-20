@@ -11,7 +11,7 @@ namespace ConsoleApplication2
         public static void calc()
         {
 
-            int output = 0;
+            decimal output = 0;
             string Input = "";
             int numberOne;
             //string Mod;
@@ -37,7 +37,7 @@ namespace ConsoleApplication2
                 string[] numbers = Input.Split('/');
                 numberOne = Convert.ToInt32(numbers[0]);
                 numberTwo = Convert.ToInt32(numbers[1]);
-                output = numberOne / numberTwo;
+                output = Convert.ToDecimal(numberOne) / Convert.ToDecimal(numberTwo);
             }
             else if (Input.Contains('*'))
             {

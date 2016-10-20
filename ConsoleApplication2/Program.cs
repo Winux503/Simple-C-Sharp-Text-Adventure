@@ -257,6 +257,8 @@ namespace ConsoleApplication2
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, new Random().Next(1000, 1500));
             AIConsole.Write(" [Loading core operating functions]...\n\n", ConsoleColor.White, 1000, 1500);
             AIConsole.Write(" {Success}\n\n", ConsoleColor.Green, 1000, 1500);
+            AIConsole.Write(" [Connecting to the internet]...\n\n", ConsoleColor.White, 1000, 1500);
+            AIConsole.Write(" [Esablished connection to 192.168.101.1]...\n\n", ConsoleColor.Cyan, 1500, 1800);
             AIConsole.Write(" [Checking for updates]...\n\n", ConsoleColor.White, 1000, 1500);
             AIConsole.Write(" [3000 new updates found]...\n\n", ConsoleColor.White, 1000, 1500);
             counterFunc();
