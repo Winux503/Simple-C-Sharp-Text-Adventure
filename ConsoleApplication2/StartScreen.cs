@@ -13,7 +13,8 @@ namespace ConsoleApplication2
     {
         public static bool skip = true;
         public static string fileName = "intro.wav";
-        public static string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+        public static string path = Path.Combine(Environment.CurrentDirectory,
+						 @"sound\", fileName);
         public static int origRow;
         public static int origCol;
         public static void GraphicsEngine(string s, int x, int y)
@@ -29,6 +30,7 @@ namespace ConsoleApplication2
                 Console.WriteLine(e.Message);
             }
         }
+
         public static void skipper()
         {
             if (skip == true)
@@ -37,8 +39,9 @@ namespace ConsoleApplication2
                 skip = false;
                 Thread.Sleep(5000);
             }
-            
+
         }
+
         public static void TitleScreen()
         {
             /*skipper();
@@ -48,33 +51,33 @@ namespace ConsoleApplication2
                     @"
  ██████╗ ██████╗ ███╗   ██╗███████╗ ██████╗ ██╗     ███████╗   ██╗    ██╗██████╗ ██╗████████╗███████╗ ██╗
 ██╔════╝██╔═══██╗████╗  ██║██╔════╝██╔═══██╗██║     ██╔════╝   ██║    ██║██╔══██╗██║╚══██╔══╝██╔════╝██╔╝
-██║     ██║   ██║██╔██╗ ██║███████╗██║   ██║██║     █████╗     ██║ █╗ ██║██████╔╝██║   ██║   █████╗  ██║ 
-██║     ██║   ██║██║╚██╗██║╚════██║██║   ██║██║     ██╔══╝     ██║███╗██║██╔══██╗██║   ██║   ██╔══╝  ██║ 
+██║     ██║   ██║██╔██╗ ██║███████╗██║   ██║██║     █████╗     ██║ █╗ ██║██████╔╝██║   ██║   █████╗  ██║
+██║     ██║   ██║██║╚██╗██║╚════██║██║   ██║██║     ██╔══╝     ██║███╗██║██╔══██╗██║   ██║   ██╔══╝  ██║
 ╚██████╗╚██████╔╝██║ ╚████║███████║╚██████╔╝███████╗███████╗██╗╚███╔███╔╝██║  ██║██║   ██║   ███████╗╚██╗
  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚══════╝╚══════╝╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝ ╚═╝
-                                                                                                         
-██╗  ██╗███████╗██╗     ██╗      ██████╗     ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗ ██╗              
-██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗██║              
-███████║█████╗  ██║     ██║     ██║   ██║    ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║██║              
-██╔══██║██╔══╝  ██║     ██║     ██║   ██║    ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║╚═╝              
-██║  ██║███████╗███████╗███████╗╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝██╗              
-╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝      ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝              
-                                                                                                         
-██╗                                                                                                      
-╚██╗██╗                                                                                                  
- ██║╚═╝                                                                                                  
- ██║▄█╗                                                                                                  
-██╔╝▀═╝                                                                                                  
-╚═╝                                                                                                      
+
+██╗  ██╗███████╗██╗     ██╗      ██████╗     ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗ ██╗
+██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗██║
+███████║█████╗  ██║     ██║     ██║   ██║    ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║██║
+██╔══██║██╔══╝  ██║     ██║     ██║   ██║    ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║╚═╝
+██║  ██║███████╗███████╗███████╗╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝██╗
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝      ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝
+
+██╗
+╚██╗██╗
+ ██║╚═╝
+ ██║▄█╗
+██╔╝▀═╝
+╚═╝
 ";
                 ConsoleColor[] Colours = {
-                ConsoleColor.Blue,
-                ConsoleColor.Cyan,
-                ConsoleColor.Green,
-                ConsoleColor.Magenta,
-                ConsoleColor.Yellow,
-                ConsoleColor.Red
-            };
+		    ConsoleColor.Blue,
+		    ConsoleColor.Cyan,
+		    ConsoleColor.Green,
+		    ConsoleColor.Magenta,
+		    ConsoleColor.Yellow,
+		    ConsoleColor.Red
+		};
 
                 origRow = Console.CursorTop;
                 origCol = Console.CursorLeft;

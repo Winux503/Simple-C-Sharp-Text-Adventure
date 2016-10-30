@@ -11,11 +11,15 @@ namespace ConsoleApplication2
         public static void write()
         {
             Console.Clear();
-            AIConsole.Write(" Welcome to the Simple document writing program...\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.Write(" Saving has been disabled due to a user space error\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.Write(" To start typing just type on the line below\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" Welcome to the Simple document writing program...\n\n",
+			    ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" Saving has been disabled due to a user space error\n\n",
+			    ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" To start typing just type on the line below\n\n",
+			    ConsoleColor.White, 500, 1000);
             AIConsole.Write(" Type \\ to quit\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.Write(" \n\n_______________________________________________________unamed.txt_______________________________________________________\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.Write(" \n\n_______________________________________________________unamed.txt_______________________________________________________\n\n",
+			    ConsoleColor.White, 500, 1000);
             StringBuilder sb = new StringBuilder();
             while (true)
             {
@@ -23,7 +27,8 @@ namespace ConsoleApplication2
                 sb.Append(ch);
                 if (ch == '\\')
                 {
-                    AIConsole.Write("\n\n Returning to prompt...\n\n", ConsoleColor.White, 500, 1000);
+                    AIConsole.Write("\n\n Returning to prompt...\n\n",
+				    ConsoleColor.White, 500, 1000);
                     break;
                 }
             }

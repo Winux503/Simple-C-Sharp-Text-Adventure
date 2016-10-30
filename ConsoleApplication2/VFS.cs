@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
 
-
 namespace ConsoleApplication2
 {
     class VFS
@@ -23,7 +22,8 @@ namespace ConsoleApplication2
             ".exec",
             ".run"
         };
-        public static string[] fileNames = {
+
+	public static string[] fileNames = {
             "",
             "",
             "",
@@ -34,7 +34,8 @@ namespace ConsoleApplication2
             "",
             ""
         };
-        public static string[] folderNames = {
+
+	public static string[] folderNames = {
             "",
             "",
             "",
@@ -45,16 +46,20 @@ namespace ConsoleApplication2
             "",
             ""
         };
-        public static string location;
-        public static void FSHandler()
+
+	public static string location;
+
+	public static void FSHandler()
         {
 
         }
-        public static void DeclareFiles()
+
+	public static void DeclareFiles()
         {
-            
+
         }
-        public static void DeclareFolders()
+
+	public static void DeclareFolders()
         {
 
         }

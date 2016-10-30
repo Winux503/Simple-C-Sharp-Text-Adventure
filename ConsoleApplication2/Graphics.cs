@@ -12,12 +12,14 @@ namespace ConsoleApplication2
     class GraphicsCon
     {
         public static string fileName = "intro.wav";
-        public static string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+        public static string path = Path.Combine(Environment.CurrentDirectory,
+						 @"sound\", fileName);
         public static string fileName2 = "intro.wav";
-        public static string path2 = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName2);
+        public static string path2 = Path.Combine(Environment.CurrentDirectory,
+						  @"sound\", fileName2);
         private static void DrawCredits()
         {
-
+	    ;
         }
         protected static int origRow;
         protected static int origCol;
@@ -40,12 +42,12 @@ namespace ConsoleApplication2
         public static void GMain()
         {
             ConsoleColor[] Colours = {
-            ConsoleColor.Red,
-            ConsoleColor.Blue,
-            ConsoleColor.Cyan,
-            ConsoleColor.Green,
-            ConsoleColor.Magenta,
-            ConsoleColor.Yellow
+		ConsoleColor.Red,
+		ConsoleColor.Blue,
+		ConsoleColor.Cyan,
+		ConsoleColor.Green,
+		ConsoleColor.Magenta,
+		ConsoleColor.Yellow
             };
             Console.Clear();
             AIConsole.WriteLine("", ConsoleColor.White,500,1000);
@@ -64,24 +66,43 @@ namespace ConsoleApplication2
             }
             Console.ResetColor();
             Console.SetCursorPosition(0,0);
-            AIConsole.WriteLine(" \n----------------------------Credits----------------------------\n\n", ConsoleColor.White,500,1000);
-            AIConsole.WriteLine(" iMoD1998 - Cronstuction of the new Console commands and ideas\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" \n----------------------------Credits----------------------------\n\n",
+				ConsoleColor.White
+				500, 1000);
+            AIConsole.WriteLine(" iMoD1998 - Cronstuction of the new Console " +
+				"commands and ideas\n\n",
+				ConsoleColor.White, 500, 1000);
             AIConsole.WriteLine(" tfm - Grumbler\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Squad Chat - \"Morale Support\"\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" MLP - Ideas and assistance\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Winux503 - Initial ideas and implementation\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" BLB - Being French\n\n", ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" Squad Chat - \"Morale Support\"\n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" MLP - Ideas and assistance\n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" Winux503 - Initial ideas and implementation\n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" BLB - Being French\n\n", ConsoleColor.White, 500,
+				1000);
             AIConsole.WriteLine(" BLJ - Existing\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Tizzle - Being a Gizzle\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Jack - Being Scouse\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" /r/csharp - Being kind and suggesting ideas \n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" C# Discord chat - putting up with my stupid questions \n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Druaga1 - Providing the music \n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" ----------------------------Credits----------------------------\n\n", ConsoleColor.White, 500, 1000);
-            AIConsole.WriteLine(" Now enjoy some of Druaga1's music...\n\n", ConsoleColor.White);
-            AIConsole.WriteLine(" Press enter to continue...\n\n", ConsoleColor.White);
+            AIConsole.WriteLine(" Tizzle - Being a Gizzle\n\n", ConsoleColor.White,
+				500, 1000);
+            AIConsole.WriteLine(" Jack - Being Scouse\n\n", ConsoleColor.White, 500,
+				1000);
+            AIConsole.WriteLine(" Lewis - GNU\\Linux\n\n", ConsoleColor.White, 500,
+				1000);
+            AIConsole.WriteLine(" TeOz - Being a spooki\n\n", ConsoleColor.White, 500,
+				1000);
+            AIConsole.WriteLine(" /r/csharp - Being kind and suggesting ideas \n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" C# Discord chat - " +
+				"putting up with my stupid questions \n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" Druaga1 - Providing the music \n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" ----------------------------Credits----------------------------\n\n",
+				ConsoleColor.White, 500, 1000);
+            AIConsole.WriteLine(" Now enjoy some of Druaga1's music...\n\n",
+				ConsoleColor.White);
+            AIConsole.WriteLine(" Press enter to continue...\n\n",
+				ConsoleColor.White);
             SoundPlayer Sound = new SoundPlayer(path2);
             Sound.Play();
             Console.ReadLine();

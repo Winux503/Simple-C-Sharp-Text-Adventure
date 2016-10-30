@@ -12,19 +12,19 @@ namespace ConsoleApplication2
 {
     static class AIConsole
     {
-
         // Sound api functions
         public static string fileName = "Blip_Select3.wav";
-        public static string path = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName);
+        public static string path = Path.Combine(Environment.CurrentDirectory,
+						 @"sound\", fileName);
         public static string fileName2 = "intro.wav";
-        public static string path2 = Path.Combine(Environment.CurrentDirectory, @"sound\", fileName2);
-        
-        
-       
+        public static string path2 = Path.Combine(Environment.CurrentDirectory,
+						  @"sound\", fileName2);
+
         //this is the remake of the Console.WriteLine(); function.
         //it has Thread.Sleep(); and ConsoleColor built in.
         //this has been done for both the Console.WriteLine and Console.Write functions.
-        public static void WriteLine(string Text, ConsoleColor Colour, int Delay1, int Delay2)
+        public static void WriteLine(string Text, ConsoleColor Colour, int Delay1,
+				     int Delay2)
         {
             //add typewriter func here
             Console.ForegroundColor = Colour;
@@ -37,7 +37,7 @@ namespace ConsoleApplication2
                 Console.Write(Text[i]);
                 new Thread(() => simpleSound.Play()).Start();
                 Thread.Sleep(50);
-            }    
+            }
         }
 
         public static void WriteLine(string Text, ConsoleColor Colour)
@@ -79,7 +79,8 @@ namespace ConsoleApplication2
             }
         }
 
-        public static void Write(string Text, ConsoleColor Colour, int Delay1, int Delay2)
+        public static void Write(string Text, ConsoleColor Colour, int Delay1,
+				 int Delay2)
         {
             Console.ForegroundColor = Colour;
             Console.Write(Text);
